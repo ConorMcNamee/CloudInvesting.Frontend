@@ -1,7 +1,5 @@
 pipeline {
     agent any
-
-    tools {nodejs "nodejs"}
     stages {
         stage('Build') {
             // Stage to build the application and prepare it for testing and deployment
