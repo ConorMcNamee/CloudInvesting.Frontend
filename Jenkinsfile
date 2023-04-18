@@ -10,7 +10,9 @@ pipeline {
         }
 
         stage('Deploy') {
-            sh './deploy.sh'
+            steps {
+                sh "echo hello world"
+            }
         }
     }
 }
