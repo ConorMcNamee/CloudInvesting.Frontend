@@ -10,7 +10,7 @@ pipeline {
         }
 
         stage('Deploy') {
-            // Deploy to GCP VM
+            sh './deploy.sh'
         }
     }
 }
