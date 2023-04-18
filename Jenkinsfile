@@ -6,6 +6,8 @@ pipeline {
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
                 sh "./build.sh"
+                sh "npm install"
+                sh "npm run build"
             }
         }
         stage('Deploy') {

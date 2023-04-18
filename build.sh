@@ -1,2 +1,1 @@
-npm install
-npm run build
+echo "Build Script"
