@@ -2,16 +2,21 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            // Build code
+            steps {
+                // Build code
+            }
         }
 
         stage('Test') {
-            // Test cases to run
+            steps {
+                // Run tests
+            }
         }
 
         stage('Deploy') {
+            // Deploy to GCP Instance
             steps {
-                sh "echo hello world"
+                sh "./deploy.sh"
             }
         }
     }
