@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:lts-bullseye-slim'
-            args '-p 3000:3000'
-        }
-    }
+    agent any
     stages {
         stage('Build') {
             // Stage to build the application and prepare it for testing and deployment
