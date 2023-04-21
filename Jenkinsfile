@@ -5,7 +5,7 @@ pipeline {
             // Stage to build the application and prepare it for testing and deployment
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh "docker build -t cloudinvesting-frontend . "
+                sh "sudo docker build -t cloudinvesting-frontend . "
             }
         }
         stage('Test') {
