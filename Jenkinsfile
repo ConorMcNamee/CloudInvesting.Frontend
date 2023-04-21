@@ -5,11 +5,15 @@ pipeline {
             // Stage to build the application and prepare it for testing and deployment
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh "./build.sh"
-                sh "npm install"
-                sh "npm run build"
+                sh "docker build -t cloudinvesting-frontend . "
             }
         }
+        stage('Test') {
+            steps {
+                sh "echo Testing Testing 1,2,3..."
+            }
+        }
+
         stage('Deploy') {
             // Deploy to GCP Instance
             steps {
