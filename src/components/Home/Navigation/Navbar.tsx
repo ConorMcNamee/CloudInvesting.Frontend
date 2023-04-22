@@ -1,10 +1,14 @@
 import React from 'react'
 
-export default function Navbar(): JSX.Element {
+import { Link } from 'react-router-dom'
 
-  return(
-    <main>
-        <p>Home Navbar</p>
-    </main>
+export default function Navbar (): JSX.Element {
+  return (
+    <nav>
+        <ul>
+          <Link to='/'>Home</Link>
+          <Link to='/dashboard'>Dashboard</Link>
+        </ul>
+    </nav>
   )
 }
